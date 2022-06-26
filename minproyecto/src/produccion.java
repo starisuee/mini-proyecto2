@@ -11,11 +11,12 @@ public class produccion {
     }
 
     public int[] ingresar_datos(){ //kilogramos producidos y entregados mensualmente
-        int i, producido;
+        int i,  producido;
+        String [] producto = {"lechuga", "repollo", "zanahoria", "tomate", "papas"};
         int [] mensualidadpro = new int [5];
         Scanner sc = new Scanner (System.in);
         for(i=0;i<=4;i++){
-            System.out.println("Ingrese las ventas del mes:" + i);
+            System.out.println("Ingrese la produccion del mes para "+ producto[i]);
             producido = sc.nextInt();
             mensualidadpro[i] = producido;
         }
@@ -36,7 +37,7 @@ public class produccion {
         enero = ob.ingresar_datos();
         System.out.println("Febrero");
         febrero = ob.ingresar_datos();
-        System.out.println("Marzo");
+        /*System.out.println("Marzo");
         marzo = ob.ingresar_datos();
         System.out.println("Abril");
         abril = ob.ingresar_datos();
@@ -55,7 +56,7 @@ public class produccion {
         System.out.println("Noviembre");
         noviembre = ob.ingresar_datos();
         System.out.println("Diciembre");
-        diciembre = ob.ingresar_datos();
+        diciembre = ob.ingresar_datos();*/
         //aqui calculare la produccion total para cada producto
         total[0] = enero[0] + febrero[0] + marzo[0] + abril[0] + mayo[0] + junio[0] + julio[0] + agosto[0] + septiembre[0] + octubre[0] + noviembre[0] + diciembre[0]; 
         total[1] = enero[1] + febrero[1] + marzo[1] + abril[1] + mayo[1] + junio[1] + julio[1] + agosto[1] + septiembre[1] + octubre[1] + noviembre[1] + diciembre[1];
